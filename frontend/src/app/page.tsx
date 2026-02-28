@@ -32,7 +32,7 @@ interface MCResult {
   histogram: { range: string; count: number }[];
 }
 
-const API = 'http://localhost:8000';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
 // Fixed node positions for SVG (tier-based horizontal, staggered vertical)
 const NODE_POSITIONS: Record<string, { x: number; y: number }> = {
