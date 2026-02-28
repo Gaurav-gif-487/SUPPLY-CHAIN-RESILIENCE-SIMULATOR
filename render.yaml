@@ -2,6 +2,7 @@ services:
   - type: web
     name: scrm-backend
     env: python
+    plan: free
     rootDir: backend
     buildCommand: "pip install -r requirements.txt"
     startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
@@ -12,6 +13,7 @@ services:
   - type: web
     name: scrm-frontend
     env: node
+    plan: free
     rootDir: frontend
     buildCommand: "npm install && npm run build"
     startCommand: "npm run start"
